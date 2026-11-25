@@ -5,24 +5,13 @@ $barraUbi = [
     [
         "TEXTO"=>"Relacion 8",
         "LINK" =>"index.php"
+    ],
+    [
+        "TEXTO"=>"Personalizar",
+        "LINK" =>"personalizar.php"
     ]
 ];
 
-  const COLORESTEXTO = [
-        'negro' => ['nombre' => 'negro', 'rgb' => [0, 0, 0]],
-        'blanco' => ['rgb' => [255, 255, 255]],
-        'rojo' => ['rgb' => [255, 0, 0]],
-        'azul' => ['rgb' => [0, 0, 255]],
-        'verde' => ['rgb' => [0, 128, 0]]
-    ];
-
-  const COLORESFONDO = [
-        'negro' => ['rgb' => [0, 0, 0]],
-        'blanco' => ['rgb' => [255, 255, 255]],
-        'rojo' => ['rgb' => [255, 0, 0]],
-        'azul' => ['rgb' => [0, 0, 255]],
-        'verde' => ['rgb' => [0, 128, 0]]
-    ]; 
 
 //dibuja la plantilla de vista
 inicioCabecera("Index - Relacion 8");
@@ -43,12 +32,22 @@ function cuerpo()
 {
 
     ?>
-         <label for="color">Colores: </label>
+         <label for="color">Color de texto: </label>
         <select name="color" id="color">
             <option value="">Seleccione color</option>
             <?php
             foreach (COLORESTEXTO as $clave => $info) {
-                echo "<option value='" . $clave . "' " . $marcado . ">" . $info["nombre"] . "</option>" . PHP_EOL;
+                echo "<option value='" . $clave . "' " . ">" . $info["nombre"] . "</option>" . PHP_EOL;
+            }
+            ?>
+        </select>
+
+        <label for="color">Color de fondo: </label>
+        <select name="color" id="color">
+            <option value="">Seleccione color</option>
+            <?php
+            foreach (COLORESFONDO as $clave => $info) {
+                echo "<option value='" . $clave . "' " . ">" . $info["nombre"] . "</option>" . PHP_EOL;
             }
             ?>
         </select>

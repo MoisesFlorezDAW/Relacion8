@@ -38,10 +38,9 @@ body {
 }
 
 #barraMenu ul{
-    font-size: small;
+    font-size: large;
     list-style: none;
     display: flex;
-    font-weight: bolder;
     
 }
 

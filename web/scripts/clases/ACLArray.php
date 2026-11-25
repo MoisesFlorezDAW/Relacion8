@@ -120,7 +120,10 @@
          */
         function existeRole(int $codRole):bool
         {
-            
+            if(array_key_exists($codRole, $_roles)){
+                return true;
+            }
+            return false;
         }
 
         /**
@@ -147,7 +150,7 @@
          */
         function getPermisoRole(int $codRole, int $numero): bool
         {
-              
+            
         }
 
         /**
