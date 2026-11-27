@@ -4,7 +4,7 @@ include_once(dirname(__FILE__). "/RegistroTexto.php");
 
 $barraUbi = [
     ["TEXTO" => "Relacion 8",
-    "LINK"  => "index.php"],
+    "LINK"  => "../personalizar/index.php"],
     ["TEXTO" => "Crear textos",
     "LINK" => "verTextos.php"]
 ];

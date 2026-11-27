@@ -20,9 +20,12 @@ $barraUbi = [
     ]
 ];
 
+$colorFondo = $_COOKIE['colorFondo'] ?? "white";
+$colorTexto = $_COOKIE['colorTexto'] ?? "black";
+
 // Dibuja la plantilla de vista
 inicioCabecera("Index - Relacion 8");
-cabecera();
+cabecera($colorTexto, $colorFondo);
 finCabecera();
 
 inicioCuerpo("Relacion 8", $barraUbi);
@@ -32,7 +35,16 @@ finCuerpo();
 // **********************************************************
 
 // Vista
-function cabecera() {}
+function cabecera(string $colorTexto, string $colorFondo) {
+    ?>
+    <style>
+        #documento {
+            background-color: <?= $colorFondo ?>;
+            color: <?= $colorTexto ?>;
+        }
+    </style>
+    <?php
+}
 
 // Vista
 function cuerpo($visitas)

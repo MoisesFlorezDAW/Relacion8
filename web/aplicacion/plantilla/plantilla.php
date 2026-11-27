@@ -1,18 +1,5 @@
 <?php
-$barraUbi = [
-    [
-        "TEXTO" => "Inicio",
-        "LINK"  => "/index.php"
-    ],
-    [
-        "TEXTO" => "Relacion 2",
-        "LINK"  => "index.php"
-    ],
-    [
-        "TEXTO" => "Ejercicio 1",
-        "LINK"  => "Ejercicio1.php"
-    ]
-];
+
 function paginaError($mensaje)
 {
   header("HTTP/1.0 404 $mensaje");
@@ -79,9 +66,7 @@ function inicioCuerpo($cabecera, array $barraUbi=[])
             </div>
             <div id="barraMenu">
                 <ul>
-                    <li><a href="../../aplicacion/personalizar/index.php">- Principal</a></li>
-                    <li><a href="../../aplicacion/personalizar/personalizar.php">- Personalizar</a></li>
-                    <li><a href="../clases/verTextos.php">- Ver Textos</a></li>
+                    <li>Sin usuario - <a href="../../aplicacion/acceso/Login.php">Iniciar sesion</a></li>
                  </ul> 
                 
             </div>

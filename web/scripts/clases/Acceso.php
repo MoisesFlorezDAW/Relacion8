@@ -118,6 +118,10 @@ class Acceso {
      * @return boolean Devuelve true si hay usuario registrado. False en caso contrario
      */
     public function hayUsuario():bool {
+        if(!this->$_validado){
+            return false;
+        }
+        return true;
      }
     
     
@@ -128,7 +132,10 @@ class Acceso {
      * @return bool Devuelve true si hay usuario registrado y tiene el permiso indicado
      */
     public function puedePermiso(int $numero):bool {
-       
+        if(!array_key_exists($numero, $_permisos)){
+            return false;
+        }
+        return true;
     }
     
     
@@ -143,7 +150,10 @@ class Acceso {
       */
     public function getNick():string|false 
     { 
-       
+        if(!$this->_validado){
+            return false;
+        }
+        return $this->_nick;
     }
   
     /**
